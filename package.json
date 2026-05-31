@@ -1,0 +1,19 @@
+{
+  "name": "dormbuild",
+  "version": "0.1.0",
+  "private": true,
+  "description": "大学生寝室公共事务管理平台",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter server dev\" \"pnpm --filter client dev\"",
+    "dev:client": "pnpm --filter client dev",
+    "dev:server": "pnpm --filter server dev",
+    "build": "pnpm --filter shared build && pnpm --filter server build && pnpm --filter client build",
+    "db:generate": "pnpm --filter server db:generate",
+    "db:push": "pnpm --filter server db:push",
+    "db:seed": "pnpm --filter server db:seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.3"
+  }
+}

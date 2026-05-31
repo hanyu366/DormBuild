@@ -1,0 +1,40 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1",
+    "@tanstack/react-query": "^5.80.6",
+    "zustand": "^5.0.5",
+    "socket.io-client": "^4.8.1",
+    "recharts": "^2.15.3",
+    "framer-motion": "^12.12.1",
+    "axios": "^1.9.0",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.511.0",
+    "react-hook-form": "^7.56.4",
+    "@hookform/resolvers": "^5.0.1",
+    "zod": "^3.25.28",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.0",
+    "class-variance-authority": "^0.7.1",
+    "shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "tailwindcss": "^4.1.7",
+    "@tailwindcss/vite": "^4.1.7"
+  }
+}
