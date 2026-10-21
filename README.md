@@ -6,6 +6,15 @@
 
 **项目状态：功能型原型｜本地运行｜暂未部署在线版本**
 
+## 两个实现版本
+
+| 入口 | 版本与范围 | 运行方式 |
+| --- | --- | --- |
+| [DormMate AI 比赛版](competition-demo/README.md) | Next.js 实现，共享看板、DeepSeek 意图解析、程序操作与状态回写；使用模拟成员与宿舍数据 | 进入 `competition-demo/`，按该目录说明使用 npm 运行 |
+| 本页下方的 DormBuild | 后续 React / Express / Prisma 实现，包含登录、投票、匿名交流等；AI 解析与完整事务执行的范围以本页说明为准 | 仓库根目录使用 pnpm 运行 |
+
+两个版本分别保留源码和依赖，比赛版补充在 `competition-demo/`，不将后续版本的功能或限制归到比赛版上。比赛版的模型调用逻辑在服务端，仓库仅提供空白环境变量模板。
+
 ![DormBuild 总览](docs/images/dashboard.png)
 
 ## 为什么做这个项目
@@ -131,6 +140,7 @@ DormBuild/
 ├── server/             # REST API、Socket.IO、定时任务与 Prisma
 ├── shared/             # 前后端共享类型与常量
 ├── docs/images/        # README 使用的真实运行截图
+├── competition-demo/   # 独立运行的 Next.js DormMate 比赛版
 └── pnpm-workspace.yaml
 ```
 
@@ -138,7 +148,7 @@ DormBuild/
 
 - 当前是本地原型，未提供生产环境部署、监控与数据迁移方案。
 - AI 和天气能力依赖使用者自行配置第三方 API。
-- 生产构建仍需适配新版 OpenAI SDK 的消息类型定义；本次仓库装修未修改应用代码。
+- 本页所述后续实现的生产构建仍需适配新版 OpenAI SDK 的消息类型定义；比赛版的构建与验证情况见其独立说明。
 - 权限模型以单个宿舍协作为主，尚未覆盖管理员分级、申诉与审计。
 
 ## 后续方向
